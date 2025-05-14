@@ -36,16 +36,3 @@ class GetExamples:
                     os.makedirs(dir_path, exist_ok=True)
                     with open(f'{dir_path}/{unique_id}.{self.file_extension}', 'w') as f:
                         f.write(code)
-    
-def main(collection_name, file_extension):
-    g = GetExamples(
-                    file_extension=file_extension, 
-                    colleciton_name=collection_name)
-    
-    g.get_examples()
-    g.write_usage_examples_to_local_files()
-
-if __name__ == '__main__':
-    collection_name = 'java'
-    file_extension = 'java'
-    main(collection_name, file_extension)

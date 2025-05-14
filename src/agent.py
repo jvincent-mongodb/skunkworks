@@ -30,14 +30,3 @@ class ExampleCodeDependencyResolver:
     
     def print_results(self):
         print(self.messages[-1].content)
-
-def main():
-    query = None
-    with open('/Users/jeffrey.vincent/skunkworks/example_code/blah.txt', 'r') as f:
-        query = f.read()
-    resolver = ExampleCodeDependencyResolver()
-    resolver.do_stuff(query)
-    resolver.print_results()
-
-if __name__ == '__main__':
-    main()
