@@ -1,9 +1,9 @@
-from get_examples import GetExamples
+from examples import GetCodeExamples
 from agent import ExampleCodeDependencyResolver
 
 def main():
     query = None
-    get_examples = GetExamples(
+    get_examples = GetCodeExamples(
                     file_extension=file_extension, 
                     colleciton_name=collection_name)
     get_examples.get_examples()

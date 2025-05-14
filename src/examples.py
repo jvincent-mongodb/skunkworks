@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 MONGO_URI = os.environ.get('MONGO_URI')
 
-class GetExamples:
+class GetCodeExamples:
     def __init__(self, file_extension, colleciton_name):
         self.code_examples = []
         self.client = MongoClient(MONGO_URI)
