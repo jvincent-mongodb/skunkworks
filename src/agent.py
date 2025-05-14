@@ -20,7 +20,7 @@ class ExampleCodeDependencyResolver:
                         state_modifier=self.system_message)
         self.messages = []
 
-    def do_stuff(self, query):
+    def run(self, query):
         events = self.agent.stream(
             {"messages": [("user", query)]},
             stream_mode="values",
