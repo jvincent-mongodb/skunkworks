@@ -2,14 +2,13 @@ import os
 import uuid
 import subprocess
 import traceback
-
 from langchain_core.tools import tool
 from langchain_openai import AzureChatOpenAI
 
 class ExampleCodeDependencyResolverTools:
     def __init__(self):
         self.llm = AzureChatOpenAI(
-            azure_deployment="gpt-4o-mini", 
+            azure_deployment="gpt-4o", 
             api_version='2024-10-21',
             timeout=60,
             temperature=0,
@@ -17,24 +16,12 @@ class ExampleCodeDependencyResolverTools:
 
     def get_tools(self):
         return [
-            # self.get_code_example,
             self.call_llm,
             self.write_executable_and_dockerfile,
             self.build_image,
             self.run_container,
             self.get_container_logs
         ]
-    
-    # @tool(parse_docstring=True)
-    # def get_code_examples(query):
-    #     pass
-    #     # TODO: pass query as collection name
-    #     # get all code examples for a given collection
-    #     # push working Docker images to Hub and tag each
-    #     # update image builder to use the lastest tagged 
-    #     # version as a base image and update as necessary
-    #     # to ultimately provide a testing container image 
-    #     # for each collection (or something close to that)
     
     @tool(parse_docstring=True)
     def call_llm(self, query: str) -> str:
@@ -155,7 +142,7 @@ class ExampleCodeDependencyResolverTools:
                 capture_output=True,
                 text=True,
                 check=True
-            )
+                )
             logs = result.stdout.strip() + ("\n" + result.stderr.strip() if result.stderr else "")
             return logs.strip()
         except subprocess.CalledProcessError as e:
