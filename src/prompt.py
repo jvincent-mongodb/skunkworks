@@ -19,7 +19,16 @@ periodic testing of the examples to ensure that they are current and working.
 In order to determine with certainty that the Dockerfile you write will result 
 in an image that includes all dependencies for each newly written code example file, 
 you will ADD each file individually to the Dockerfile, and you will then build 
-and run the resulting container.
+and run the resulting container. No NOT write a requirements.txt file. 
+Instead DO install all dependencies with RUN commands directly in the Dockerfile 
+itself.
+
+Do NOT attempt to run the code as if it were in a complete app. For example, do 
+not write `python manage.py` as a CMD or ENTRYPOINT in the Dockerfile. Instead, 
+run the executable you have written directly. For example write a CMD such as 
+`python example.py` or `java -jar example.java` when the example code provided 
+in the query has been written to a file by that name. ALWAYS infer this command 
+from the programming language in the example code.
 
 If the example code does not compile and run, update the Dockerfile to include 
 any missing dependencies as revealed by the container logs. Then continue to build 

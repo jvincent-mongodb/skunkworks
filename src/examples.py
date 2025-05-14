@@ -2,7 +2,9 @@ import os
 import uuid
 from pymongo import MongoClient
 
-MONGO_URI = os.environ.get('MONGO_URI')
+MONGO_USER = os.environ.get('MONGO_USER')
+MONGO_PASSWORD = os.environ.get('MONGO_PASSWORD')
+MONGO_URI = f'mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@m0cluster.h6fulge.mongodb.net/?retryWrites=true&w=majority&appName=M0Cluster'
 
 class GetCodeExamples:
     def __init__(self, file_extension, colleciton_name):

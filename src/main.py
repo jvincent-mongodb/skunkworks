@@ -1,4 +1,5 @@
 import argparse
+import os
 from examples import GetCodeExamples
 from agent import ExampleCodeDependencyResolver
 
@@ -9,14 +10,28 @@ def parse_args():
     args = args.parse_args()
     return args
 
+def build_query(collection_name, directories):
+    query = ''
+    for i in directories:
+        files = os.listdir(f'{collection_name}/{i}')
+        for file in files:
+            with open(f'{collection_name}/{i}/{file}', 'r') as f:
+                query = query + f.read() + '\n\n'
+    return query
+
+def get_sample_directories(collection_name):
+    sample_directories = os.listdir(collection_name)
+    return sample_directories
+
 def main(collection_name, file_extension):
-    query = None
     get_examples = GetCodeExamples(
                     file_extension=file_extension, 
                     colleciton_name=collection_name)
     get_examples.get_examples()
     get_examples.write_usage_examples_to_local_files()
-    # TODO: build query from one page's example code
+    directories = get_sample_directories(collection_name)
+    query = build_query(collection_name, directories)
+
     agent = ExampleCodeDependencyResolver()
     agent.run(query)
     agent.print_results()
