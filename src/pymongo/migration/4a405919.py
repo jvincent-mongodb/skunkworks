@@ -1,0 +1,1 @@
+await collection.insert_one(...)

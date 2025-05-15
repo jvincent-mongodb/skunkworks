@@ -1,0 +1,1 @@
+aggregation_result = await products_coll.aggregate(pipeline)

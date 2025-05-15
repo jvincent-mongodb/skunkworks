@@ -64,8 +64,9 @@ class ExampleCodeDependencyResolverTools:
         Returns: 
             dir_path (string): The file path to a Dockerfile's parent directory.
         """
-        dir_name = f'{uuid.uuid4().hex[:8]}'
-        dir_path = f'/Users/jeffrey.vincent/skunkworks/dockerfiles/{dir_name}'
+        # dir_name = f'{uuid.uuid4().hex[:8]}'
+        out_dir = os.environ.get('OUTPUT_DIR')
+        dir_path = f'/Users/jeffrey.vincent/skunkworks/dockerfiles/{out_dir}'
         os.makedirs(dir_path, exist_ok=True)
 
         executable_path = os.path.join(dir_path, executable_filename)

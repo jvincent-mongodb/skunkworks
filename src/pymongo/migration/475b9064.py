@@ -1,0 +1,1 @@
+await client.list_databases()

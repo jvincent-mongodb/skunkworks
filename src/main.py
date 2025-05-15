@@ -15,8 +15,10 @@ def build_queries(collection_name, directories):
     for i in directories:
         files = os.listdir(f'{collection_name}/{i}')
         with open(f'{collection_name}/{i}/{files[0]}', 'r') as f:
-            query = f.read()
-            queries.append(query)
+            q = {}
+            q['query'] = f.read()
+            q['dir_name'] = i
+            queries.append(q)
     return queries
 
 def get_sample_directories(collection_name):
@@ -33,7 +35,8 @@ def main(collection_name, file_extension):
     queries = build_queries(collection_name, directories)
     agent = ExampleCodeDependencyResolver()
     for i in queries:
-        agent.run(i)
+        os.environ['OUTPUT_DIR'] = i['dir_name']
+        agent.run(i['query'])
         agent.print_results()
 
 if __name__ == '__main__':

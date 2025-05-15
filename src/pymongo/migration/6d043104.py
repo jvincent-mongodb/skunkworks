@@ -1,0 +1,1 @@
+await collection.find_one(...)

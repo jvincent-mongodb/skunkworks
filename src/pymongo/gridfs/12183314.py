@@ -1,0 +1,1 @@
+custom_bucket = gridfs.GridFSBucket(db, bucket_name="myCustomBucket")

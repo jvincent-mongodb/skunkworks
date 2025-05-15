@@ -21,9 +21,11 @@ class ExampleCodeDependencyResolver:
         self.messages = []
 
     def run(self, query):
+        config = {"recursion_limit": 50}
         events = self.agent.stream(
             {"messages": [("user", query)]},
             stream_mode="values",
+            config=config
         )
         for event in events:
             self.messages.extend(event["messages"])

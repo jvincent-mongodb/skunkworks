@@ -1,0 +1,1 @@
+collection.count_documents({ "author": "Mike" })
