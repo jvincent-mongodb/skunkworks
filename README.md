@@ -25,7 +25,7 @@ examples in the MongoDB docs.
 But yeah, that's what it does and how it works. 
 
 The afore mentioned second tool could take the newly minted Dockerfiles and confirm 
-that they includes the required dependencies to run each of the code examples on 
+that they include the required dependencies to run each of the code examples on 
 a given docs page or even product section, such that there will be a common test 
-container for multiple code examples,but that is beyond the scope of this 
+container for multiple code examples, but that is beyond the scope of this 
 Skunkworks project. 
