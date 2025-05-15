@@ -1,1 +1,0 @@
-GridFSBucket gridFSBucket = GridFSBuckets.create(database, "myCustomBucket");

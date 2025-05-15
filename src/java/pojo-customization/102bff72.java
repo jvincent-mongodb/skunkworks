@@ -1,1 +1,0 @@
-database.getCollection(Person.COLLECTION_NAME, Person.class);

@@ -1,1 +1,0 @@
-MongoCollection<Flower> collection = database.getCollection("flowers", Flower.class);

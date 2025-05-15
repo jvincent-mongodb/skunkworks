@@ -1,3 +1,0 @@
-...
-1317 [cluster-ClusterId{value='<your cluster id>', description='null'}-<your connection uri>] INFO  org.mongodb.driver.cluster - Discovered replica set primary <your connection uri>
-1568 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:7, serverValue:<server value>}] to <your connection uri>

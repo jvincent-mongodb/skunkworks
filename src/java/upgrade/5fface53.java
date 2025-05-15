@@ -1,1 +1,0 @@
-VectorSearchOptions opts = vectorSearchOptions().filter(eq("x", 8));

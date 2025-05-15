@@ -1,1 +1,0 @@
-collection.listIndexes().forEach(doc -> System.out.println(doc.toJson()));

@@ -1,1 +1,0 @@
-Document.parse("{ $arrayElemAt: ['$categories', 0] }")

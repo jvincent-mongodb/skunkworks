@@ -1,1 +1,0 @@
-collection.find({ "gender": "female", "age" : { "$gt": 29 }}, { "_id": 0, "email": 1 })

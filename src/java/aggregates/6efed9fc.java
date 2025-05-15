@@ -1,1 +1,0 @@
-sortByCount(new Document("$floor", "$x"));

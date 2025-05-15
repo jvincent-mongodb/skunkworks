@@ -1,1 +1,0 @@
-DeleteOneModel<Document> deleteDoc = new DeleteOneModel<>(Filters.eq("_id", 1));

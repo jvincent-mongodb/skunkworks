@@ -1,1 +1,0 @@
-MongoCursor<Document> cursor = collection.find().cursor();

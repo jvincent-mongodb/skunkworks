@@ -1,1 +1,0 @@
-[ { $match: { location: { $eq: "California" } } } ]
