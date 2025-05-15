@@ -48,12 +48,12 @@ class ExampleCodeDependencyResolverTools:
         return dockerfile_content, executable_filename
 
     @tool(parse_docstring=True)
-    def write_executable_and_dockerfile(code_example: str, executable_filename: str, dockerfile_content: str) -> str:
+    def write_executable_and_dockerfile(dir_name: str, clean_query: str, executable_filename: str, dockerfile_content: str) -> str:
         """Write an executable file containing the example code and a Dockerfile 
         with the llm generated Dockerfile content.
 
         Args: 
-            code_example (string): A code example to determine the dependencies for.
+            clean_query (string): A code example to determine the dependencies for.
 
             executable_filename (string): A filename for the code example.
 
@@ -64,13 +64,13 @@ class ExampleCodeDependencyResolverTools:
         Returns: 
             dir_path (string): The file path to a Dockerfile's parent directory.
         """
-        unique_id = uuid.uuid4().hex[:8]
-        dir_path = f'/Users/jeffrey.vincent/skunkworks/dockerfiles/{unique_id}'
+        dir_name = f'{uuid.uuid4().hex[:8]}'
+        dir_path = f'/Users/jeffrey.vincent/skunkworks/dockerfiles/{dir_name}'
         os.makedirs(dir_path, exist_ok=True)
 
         executable_path = os.path.join(dir_path, executable_filename)
         with open(executable_path, 'w') as f:
-            f.write(code_example)
+            f.write(clean_query)
 
         dockerfile_path = os.path.join(dir_path, 'Dockerfile')
         with open(dockerfile_path, 'w') as f:

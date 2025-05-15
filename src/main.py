@@ -11,13 +11,11 @@ def parse_args():
     return args
 
 def build_query(collection_name, directories):
-    query = ''
     for i in directories:
         files = os.listdir(f'{collection_name}/{i}')
-        for file in files:
-            with open(f'{collection_name}/{i}/{file}', 'r') as f:
-                query = query + f.read()
-                break
+        with open(f'{collection_name}/{i}/{files[0]}', 'r') as f:
+            query = f.read()
+
     return query
 
 def get_sample_directories(collection_name):
@@ -32,6 +30,7 @@ def main(collection_name, file_extension):
     get_examples.write_usage_examples_to_local_files()
     directories = get_sample_directories(collection_name)
     query = build_query(collection_name, directories)
+    print(query)
 
     agent = ExampleCodeDependencyResolver()
     agent.run(query)
