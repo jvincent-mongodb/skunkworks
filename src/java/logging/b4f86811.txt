@@ -1,0 +1,3 @@
+...
+829  [cluster-rtt-ClusterId{value='<some value>', description='null'}-<your connection URI>] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:<your server value>}] to <your connection uri>
+977  [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:7, serverValue:<your server value>}] to <your connection uri>

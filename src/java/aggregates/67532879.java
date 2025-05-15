@@ -1,0 +1,1 @@
+bucketAuto("$price", 10);

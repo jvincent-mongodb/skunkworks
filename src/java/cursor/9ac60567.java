@@ -1,0 +1,3 @@
+for (Document cursor : collection.find()) {
+   ...
+}

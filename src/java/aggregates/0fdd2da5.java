@@ -1,0 +1,1 @@
+project(fields(include("title", "plot"), excludeId()));

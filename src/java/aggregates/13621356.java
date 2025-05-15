@@ -1,0 +1,1 @@
+graphLookup("contacts", "$friends", "friends", "name", "socialNetwork");

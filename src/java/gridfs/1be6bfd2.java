@@ -1,0 +1,1 @@
+GridFSDownloadOptions downloadOptions = new GridFSDownloadOptions().revision(1);

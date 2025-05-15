@@ -1,0 +1,1 @@
+collection.distinct("awards.wins", Integer.class);
