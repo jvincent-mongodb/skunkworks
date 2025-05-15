@@ -1,1 +1,0 @@
-await movies.create_index([("type", pymongo.ASCENDING), ("genre", pymongo.ASCENDING)])

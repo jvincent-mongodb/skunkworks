@@ -1,1 +1,0 @@
-results = client.bulk_write(operations, verbose_results=True)

@@ -1,1 +1,0 @@
-await collection.estimated_document_count()

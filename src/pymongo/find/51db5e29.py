@@ -1,1 +1,0 @@
-restaurant = sample_restaurants.restaurants.find_one({"cuisine": "Bakery"})

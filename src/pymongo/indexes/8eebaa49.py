@@ -1,1 +1,0 @@
-result = await movies.create_index("cast")

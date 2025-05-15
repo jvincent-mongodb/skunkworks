@@ -1,1 +1,0 @@
-custom_bucket = gridfs.AsyncGridFSBucket(db, bucket_name="myCustomBucket")

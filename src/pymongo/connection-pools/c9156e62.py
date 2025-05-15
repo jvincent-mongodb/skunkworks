@@ -1,1 +1,0 @@
-client = AsyncMongoClient(host, port, maxPoolSize=50)

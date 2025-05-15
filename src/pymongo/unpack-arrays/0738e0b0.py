@@ -1,1 +1,0 @@
-uri = "mongodb+srv://mongodb-example:27017";

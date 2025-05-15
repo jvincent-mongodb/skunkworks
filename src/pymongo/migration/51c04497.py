@@ -1,1 +1,0 @@
-await collection.update_search_index(...)
