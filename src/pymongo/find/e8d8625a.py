@@ -1,0 +1,1 @@
+all_restaurants = sample_restaurants.restaurants.find({})

@@ -1,0 +1,3 @@
+cursor = sample_restaurants.restaurants.find({"cuisine": "Spanish"})
+async for restaurant in cursor:
+...

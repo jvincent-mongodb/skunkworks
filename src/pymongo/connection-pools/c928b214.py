@@ -1,0 +1,1 @@
+client = MongoClient("mongodb://<host>:<port>/?maxPoolSize=50")

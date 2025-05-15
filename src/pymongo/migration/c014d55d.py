@@ -1,0 +1,1 @@
+await db.validate_collection(...)

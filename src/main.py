@@ -16,7 +16,8 @@ def build_query(collection_name, directories):
         files = os.listdir(f'{collection_name}/{i}')
         for file in files:
             with open(f'{collection_name}/{i}/{file}', 'r') as f:
-                query = query + f.read() + '\n\n'
+                query = query + f.read()
+                break
     return query
 
 def get_sample_directories(collection_name):

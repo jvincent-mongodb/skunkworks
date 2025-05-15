@@ -1,0 +1,3 @@
+def prefer_local(server_descriptions):
+    ...
+    return servers  # list containing preferred servers

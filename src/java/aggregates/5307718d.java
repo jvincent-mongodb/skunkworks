@@ -1,0 +1,1 @@
+replaceRoot("$spanish_translation");
