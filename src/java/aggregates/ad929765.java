@@ -1,1 +1,0 @@
-bucketAuto("$price", 10);

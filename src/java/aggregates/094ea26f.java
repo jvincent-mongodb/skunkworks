@@ -1,1 +1,0 @@
-project(fields(computed("rating", "$rated"), excludeId()));

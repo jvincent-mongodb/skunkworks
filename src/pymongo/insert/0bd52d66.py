@@ -1,1 +1,0 @@
-sample_restaurants.restaurants.insert_one({"name" : "Mongo's Burgers"})

@@ -1,1 +1,0 @@
-await movies.create_index({ "location.$**": pymongo.ASCENDING })

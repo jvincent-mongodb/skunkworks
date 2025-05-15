@@ -1,1 +1,0 @@
-aggregation_result = await person_coll.aggregate(pipeline)

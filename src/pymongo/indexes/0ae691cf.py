@@ -1,1 +1,0 @@
-await collection.drop_search_index("my_index")

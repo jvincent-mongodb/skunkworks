@@ -1,1 +1,0 @@
-import static com.mongodb.client.model.Indexes.*;

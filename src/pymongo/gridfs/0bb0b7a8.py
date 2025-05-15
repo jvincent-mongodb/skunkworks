@@ -1,1 +1,0 @@
-bucket.rename(ObjectId("66b3c86e672a17b6c8a4a4a9"), "new_file_name")

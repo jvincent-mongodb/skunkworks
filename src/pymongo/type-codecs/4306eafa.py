@@ -1,1 +1,0 @@
-await collection.insert_one({"num": DecimalInt("45.321")})
