@@ -1,3 +1,0 @@
-import pprint
-...
-pprint.pp(result)

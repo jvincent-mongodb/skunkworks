@@ -1,1 +1,0 @@
-cursor = sample_restaurants.restaurants.find({"cuisine": "Spanish"})

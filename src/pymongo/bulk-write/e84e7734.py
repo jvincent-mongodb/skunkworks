@@ -1,1 +1,0 @@
-results = await restaurants.bulk_write(operations, ordered=False)

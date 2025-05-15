@@ -1,1 +1,0 @@
-person_coll = agg_db["persons"]

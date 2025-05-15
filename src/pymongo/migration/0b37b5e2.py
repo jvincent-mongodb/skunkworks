@@ -1,1 +1,0 @@
-await collection.create_search_index(...)

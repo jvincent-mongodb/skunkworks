@@ -1,1 +1,0 @@
-collection.count_documents({})

@@ -1,1 +1,0 @@
-await collection.count_documents({})

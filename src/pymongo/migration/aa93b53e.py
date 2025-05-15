@@ -1,1 +1,0 @@
-await client.list_database_names()

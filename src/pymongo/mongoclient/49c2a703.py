@@ -1,1 +1,0 @@
-client: MongoClient[MyTypedDict] = MongoClient()

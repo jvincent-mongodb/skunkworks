@@ -1,1 +1,0 @@
-aggregation_result = await orders_coll.aggregate(pipeline)

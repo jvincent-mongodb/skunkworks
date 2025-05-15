@@ -1,1 +1,0 @@
-bucket.delete(ObjectId("66b3c86e672a17b6c8a4a4a9"))

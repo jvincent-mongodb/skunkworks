@@ -1,1 +1,0 @@
-await collection.drop_index(...)

@@ -1,1 +1,0 @@
-id = (await posts.insert_one(doc)).inserted_id

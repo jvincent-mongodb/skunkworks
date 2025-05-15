@@ -1,1 +1,0 @@
-await theaters.create_index("theaterId", unique=True)

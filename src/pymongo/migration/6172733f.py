@@ -1,1 +1,0 @@
-await collection.list_indexes()

@@ -1,1 +1,0 @@
-await collection.delete_one(...)
