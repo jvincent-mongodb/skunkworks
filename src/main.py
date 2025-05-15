@@ -6,7 +6,6 @@ from agent import ExampleCodeDependencyResolver
 def parse_args():
     args = argparse.ArgumentParser()
     args.add_argument('collection_name')
-    args.add_argument('file_extension')
     args = args.parse_args()
     return args
 
@@ -25,9 +24,8 @@ def get_sample_directories(collection_name):
     sample_directories = os.listdir(collection_name)
     return sample_directories
 
-def main(collection_name, file_extension):
+def main(collection_name):
     get_examples = GetCodeExamples(
-                    file_extension=file_extension, 
                     colleciton_name=collection_name)
     get_examples.get_examples()
     get_examples.write_usage_examples_to_local_files()
@@ -42,5 +40,4 @@ def main(collection_name, file_extension):
 if __name__ == '__main__':
     args = parse_args()
     collection_name = args.collection_name
-    file_extension = args.file_extension
-    main(collection_name, file_extension)
+    main(collection_name)

@@ -7,11 +7,10 @@ MONGO_PASSWORD = os.environ.get('MONGO_PASSWORD')
 MONGO_URI = f'mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@m0cluster.h6fulge.mongodb.net/?retryWrites=true&w=majority&appName=M0Cluster'
 
 class GetCodeExamples:
-    def __init__(self, file_extension, colleciton_name):
+    def __init__(self, colleciton_name):
         self.code_examples = []
         self.client = MongoClient(MONGO_URI)
         self.raw_data = None
-        self.file_extension = file_extension
         self.collection_name = colleciton_name
 
     def get_examples(self):
@@ -33,8 +32,9 @@ class GetCodeExamples:
                     if category != 'Usage example':
                         continue
                     code = i.get('code')
+                    file_extension = i.get('file_extension')
                     unique_id = uuid.uuid4().hex[:8]
                     dir_path = f'{self.collection_name}/{page}'
                     os.makedirs(dir_path, exist_ok=True)
-                    with open(f'{dir_path}/{unique_id}.{self.file_extension}', 'w') as f:
+                    with open(f'{dir_path}/{unique_id}{file_extension}', 'w') as f:
                         f.write(code)

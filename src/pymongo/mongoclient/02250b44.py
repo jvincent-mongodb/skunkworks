@@ -1,0 +1,1 @@
+client = MongoClient(document_class=OrderedDict[str, int])

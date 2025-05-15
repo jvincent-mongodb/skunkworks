@@ -1,0 +1,1 @@
+await collection.delete_many(...)
