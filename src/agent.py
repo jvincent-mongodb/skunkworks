@@ -15,7 +15,7 @@ class ExampleCodeDependencyResolver:
         self.custom_tools = ExampleCodeDependencyResolverTools()
         self.toolkit = self.custom_tools.get_tools()
         self.agent = create_react_agent(
-                        self.llm, 
+                        self.llm,
                         self.toolkit, 
                         state_modifier=self.system_message)
         self.messages = []
