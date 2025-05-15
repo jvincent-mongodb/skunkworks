@@ -28,6 +28,8 @@ def get_sample_directories(collection_name):
     return sample_directories
 
 def main(collection_name, dockerfiles_directory_path):
+    os.makedirs(dockerfiles_directory_path, exist_ok=True)
+    os.environ['DOCKERFILES_DIR'] = dockerfiles_directory_path
     get_examples = GetCodeExamples(
                     colleciton_name=collection_name)
     get_examples.get_examples()
@@ -44,5 +46,4 @@ if __name__ == '__main__':
     args = parse_args()
     collection_name = args.collection_name
     dockerfiles_directory_path = args.dockerfiles_directory_path
-    os.environ['DOCKERFILES_DIR'] = dockerfiles_directory_path
     main(collection_name, dockerfiles_directory_path)
