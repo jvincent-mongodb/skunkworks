@@ -29,3 +29,20 @@ that they include the required dependencies to run each of the code examples on
 a given docs page or even product section, such that there will be a common test 
 container for multiple code examples, but that is beyond the scope of this 
 Skunkworks project. 
+
+## Example Usage
+
+### Set the env vars
+
+```
+export AZURE_OPENAI_ENDPOINT=<api-endpoint>
+export AZURE_OPENAI_API_KEY=<api-key>
+export MONGO_USER=<mongo-user>
+export MONGO_PASSWORD=<mongo-password>
+```
+
+### Run the agent workflow
+
+```
+python main.py django /Users/jeffrey.vincent/skunkworks
+```
